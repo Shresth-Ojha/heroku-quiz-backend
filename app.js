@@ -13,9 +13,9 @@ const report_1 = __importDefault(require("./routes/report"));
 const app = (0, express_1.default)();
 const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING || '';
 app.use(express_1.default.json());
-// app.get('/', (req, res) => {
-//     res.send("hey");
-// })
+app.get('/', (req, res) => {
+    res.send("Backend for quiz-app");
+})
 //redirect /user requests to userRoute
 app.use('/user', user_1.default);
 //redirect /auth requests to authRoute
